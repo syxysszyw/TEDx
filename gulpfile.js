@@ -65,7 +65,7 @@ gulp.task('output', function() {
 	
 });
 
-gulp.task('dev',['connect'], function() {
+gulp.task('dev',['connect', 'less'], function() {
 	livereload.listen();
 	gulp.watch(['less/*.less'],['less']);
 });
