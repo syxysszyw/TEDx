@@ -4,7 +4,25 @@ function autoDiv() {
 	// if ( winScreen < 560 ) {
 
 	// }
-	$(".banner").css("height",$(window).height() - $(".topbar_content").height());
+	var bannerH = $(window).height() - $(".topbar_content").height();
+	$(".banner").css("height", bannerH);
+
+	var windowW = $(window).width();
+	var scaleUnit = windowW / 1800;
+	if (windowW > 700) {
+		$('.banner .TEDxLogos, .ted-line').css({
+			'-webkit-transform': 'scale(' + scaleUnit + ')',
+			'-ms-transform': 'scale(' + scaleUnit + ')',
+			'transform': 'scale(' + scaleUnit + ')'
+		})
+	} else {
+		$('.banner .TEDxLogos, .ted-line').css({
+			'-webkit-transform': 'scale(1)',
+			'-ms-transform': 'scale(1)',
+			'transform': 'scale(1)'
+		})
+	}
+	
 }
 $(window).resize(function() {
 	autoDiv();

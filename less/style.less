@@ -294,7 +294,8 @@ input[type='text'][readonly]:focus{
     .enroll{
       z-index: 10;
       position: absolute;
-      right: 168px;
+      // right: 168px;
+      right: 0;
       top: 40px;
       width: 92px;
       height: 40px;
@@ -316,12 +317,12 @@ input[type='text'][readonly]:focus{
         .logo{
             top: -2px;
         }
-        .nav .menu{
-          top: 18px;
+        .nav .menu, .enroll{
+          top: 20px;
         }
-        .enroll{
-            top: 18px;
-        }
+        // .enroll{
+        //     top: 20px;
+        // }
         .lang_tab{
             top: 27px;
         }
@@ -380,44 +381,136 @@ input[type='text'][readonly]:focus{
     position: relative; 
     overflow: hidden;
     width: 100%;
-    // min-width: 1171px;
     height: 900px;
     margin-top: 120px;
-    background: url(../images/banner01.jpg) no-repeat center bottom;
-    background-attachment: fixed;
-    background-size:cover;
+    // background-color: #000;
+    background-image: url(../images/banner_bg.png);
     transition:margin-top .3s ease;
+    .ted-sign, .scene {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .ted-line{
+      position: absolute;
+      width: 1078px;
+      height: 452px;
+      left: 50%;
+      margin-left: -539px;
+      top: 50%;
+      margin-top: -226px;
+      z-index: 1;
+      .line-box {
+        position: absolute;
+        opacity: .6;
+        &.l1 {
+          left: 0;
+          width: 468px;
+          height: 346px;
+        }
+        &.l2 {
+          right: 0;
+          width: 611px;
+          height: 462px;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
     .ted-sign{
-      overflow: hidden;
+      z-index: 2;
       .sign-a, .sign-b{
         position: absolute;
         background-repeat: no-repeat;
         transition: all ease-in-out .2s;
+        img {
+          width: 100%;
+        }
       }
       .sign-a{
+        width: 27%;
         left: 0;
-        margin-left: -50%;
-        // top: 127px;
         top: 50%;
-        margin-top: -230px;
-        // width: 403px;
-        // height: 461px;
-        background-image: url(../images/sign_a.png);
-        background-size: 100%;
+        margin-left: -15%;
+        margin-top: -15%;
       }
       .sign-b{
-        right: -427px;
-        bottom: -307px;
-        // width: 885px;
-        // height: 580px; 
-        background-image: url(../images/sign_b.png);
-        background-size: 100%;
+        width: 50%;
+        right: 0;
+        bottom: 0;
+        margin-right: -25%;
+        margin-bottom: -17%;
       }
     }
     &.active{
       margin-top: 80px;
     }
-    // will-change: transform;
+    .scene {
+      z-index: 3;
+    }
+    .TEDxLogos {
+      position: absolute;
+      width: 858px;
+      height: 292px;
+      left: 50%;
+      top: 50%;
+      margin-left: -429px;
+      margin-top: -146px;
+      .ny_container.tedx & {
+        width: 412px;
+        height: 292px;
+        margin-left: -206px;
+        margin-top: -146px;
+      }
+    }
+    .TEDxexbl {
+      position: absolute;
+      width: 412px;
+      height: 292px;
+      img {
+        width: 100%;
+      }
+    }
+    .TEDx2016 {
+      position: absolute;
+      width: 409px;
+      height: 119px;
+      // top: 0;
+      img {
+        width: 100%;
+      }
+    }
+    .TEDxDATE {
+      position: absolute;
+      top: 130px;
+      color: #db3d1d;
+      font-size: 36px;
+      font-weight: bold;
+      img {
+        width: 100%;
+      }
+    }
+    .TEDxbtn {
+      position: absolute;
+      top: 193px;
+      width: 320px;
+      height: 100px;
+      font-weight: bolder;
+      a {
+        display: block;
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      
+    }
+    .TEDx2016, .TEDxDATE, .TEDxbtn {
+      left: 430px;
+    }
     .ui_maxw{
         position: relative;
         height: 100%;
@@ -751,11 +844,7 @@ input[type='text'][readonly]:focus{
 
 .footer{
   width: 100%;
-  // min-width: 1171px;
   height: 100px;
-  // background: url(../images/banner01.jpg) no-repeat center;
-  // background-attachment: fixed;
-  // background-size:cover;
   background-color: #db3d1d;
   .coryright{
     padding-top: 40px;
@@ -795,9 +884,9 @@ input[type='text'][readonly]:focus{
 .tedx_2{
   width: 100%;
   // min-width: 1171px;
-  padding-top: 79px;
-  padding-bottom: 60px;
-  background-color: #e9e9e9;
+  // padding-top: 79px;
+  // padding-bottom: 60px;
+  background-color: #F1F1F2;
   .title{
     padding-bottom: 50px;
     text-align: center;
@@ -815,90 +904,82 @@ input[type='text'][readonly]:focus{
     }
   }
   .photo{
-    padding-bottom: 20px;
+    // padding-bottom: 20px;
     text-align: center;
     img{
       width: 100%;
     }
   }
+  > .ui_maxw{
+    width: 100%;
+  }
 }
 
 .team_home{
-  // overflow: hidden;
-  padding-bottom: 95px;
+  &.tedx {
+    position: relative;
+    .tedx_logo, .tedx_name {
+      position: relative;
+      background-color: #fff;
+    }
 
+    .mod_cont {
+      font-size: 16px;
+      color: #111111;
+      line-height: 2;
+    }
+  }
+  padding-bottom: 50px;
   ul{
-  //   padding-top: 30px;
-  //  // margin-right: -125px;
-  // text-align: center;
-  //   li{
-  //     display: inline-block;
-  //     position: relative;
-  //     width: 306px;
-  //     height: 306px;
-  //     margin:0 35px 100px;
-  //     &.ui-justify{
-  //         margin: 0;
-  //     }
-  //     .photo{
-  //       width: 306px;
-  //       height: 306px;
-  //       img{
-  //         width: 100%;
-  //       }
-  //     }
-  //     .name{
-  //       position: absolute;
-  //       bottom: -22px;
-  //       right: -43px;
-  //       width: 134px;
-  //       height: 134px;
-  //       background-color: rgba(229, 46, 46, 0.8);
-  //       border-radius: 100%;
-  //       .txt{
-  //         display: table-cell;
-  //         vertical-align: middle;
-  //         width: 134px;
-  //         height: 134px;
-  //         font-size: 18px;
-  //         color: #FFF;
-  //         text-align: center;
-  //       }
-  //     }
-  //   }
-  li{
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
-    margin-bottom: 60px;
-    margin-right: 188px;
-    width: 80px;
-    &:nth-child(5n){
-      margin: 0;
-    }
-    .name, .post{
-      display: block;
-    }
-    .name {
-      font-size: 26px;
-      color: #333333;
-    }
-    .post {
-      font-size: 18px;
-      color: #666666;
-    }
-  }
-  }
-}
-@media screen and (max-width:1171px) { 
-  .team_home {
-    ul {
-      li {
-        margin-right: 138px;
+    font-size: 0;
+    li{
+      box-sizing: border-box;
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      margin-bottom: 45px;
+      // min-width: 174px;
+      // margin-right: 70px;
+      width: 16%;
+      margin-right: 5%;
+      &:nth-child(5n) {
+        margin-right: 0;
+      }
+      .name, .post{
+        display: block;
+        // text-overflow: ellipsis;
+        // overflow: hidden;
+        // white-space: nowrap;
+      }
+      .name {
+        font-size: 26px;
+        color: #333333;
+      }
+      .post {
+        font-size: 18px;
+        color: #666666;
       }
     }
   }
 }
+@media screen and (max-width:1025px) {
+  .team_home {
+    ul {
+      li {
+        &, &:nth-child(5n){
+          margin-right: 6%;
+        }
+        width: 20.5%;
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+
+
 .ny_banner_2{
   width: 100%;
   // min-width: 1171px;
@@ -1053,8 +1134,12 @@ input[type='text'][readonly]:focus{
 .nav_btn{
   display: block;
 }
+.header {
+  .enroll{
+    right: -7%;
+  }
+} 
 .nav {
-  
   li{
     width: 24%;
     margin-right: 0;
@@ -1090,26 +1175,6 @@ input[type='text'][readonly]:focus{
   }
 }
 
-// .team_home ul li {
-//   width: 250px;
-//   height: 220px;
-//   margin-bottom: 50px;
-// }
-// .team_home ul li .photo {
-//   width: 220px;
-//   height: 220px;
-// }
-// .team_home ul li .name {
-//   right: 0;
-//   bottom: -2px;
-// }
-// .team_home ul li .name, .team_home ul li .name .txt {
-//   width: 90px;
-//   height: 90px;
-// }
-// .team_home ul li .name .txt {
-//   font-size: 14px;
-// }
 .col_3 .content li {
   width: 252px;
   margin-right: 80px;
@@ -1216,15 +1281,16 @@ input[type='text'][readonly]:focus{
     width: 100%;
   }
 }
-.banner .ui_maxw .banner_btn .btn{
-  min-width: 100px;
-  height: 44px;
-  line-height: 44px;
-  font-size: 14px;
-}
-
 .banner{
   .ui_maxw {
+    .banner_btn {
+      .btn {
+          min-width: 100px;
+          height: 44px;
+          line-height: 44px;
+          font-size: 14px;
+      }
+    }
     .banner_txt, .banner_date {
       left: 8%;
     }
@@ -1239,51 +1305,21 @@ input[type='text'][readonly]:focus{
       top: 52%;
     }
   }
-  .ted-sign{
-    .sign-a{
-      left: -68px;
-      top: -44px;
-      margin-top: 0;
-      width: 132px;
-      height: 156px;
-      // background-size: 132px 156px;
-    }
-    .sign-b{
-      right: -126px;
-      bottom: -81px;
-      width: 222px;
-      height: 145px;
-      // background-size: 222px 145px;
+}
+.tedx_2 {
+
+  .p {
+    padding: 0 5px;
+  }
+  > .ui_maxw{
+    overflow: hidden;
+  }
+  .photo {
+    img {
+      transform: scale(1.3);
+      transform-origin: 50% 100%;
     }
   }
-  
-}
-.tedx_2 p{
-  padding:0 5px;
-}
-.team_home ul li {
-  width: 200px;
-  height: 170px;
-  margin: 0 15px 30px;
-}
-.team_home ul li .photo {
-  width: 170px;
-  height: 170px;
-}
-.team_home ul li .name {
-  right: 0;
-  bottom: -2px;
-}
-.team_home ul li .name, .team_home ul li .name .txt {
-  width: 70px;
-  height: 70px;
-}
-.team_home ul li .name .txt {
-  font-size: 12px;
-}
-.col_2 .content p span{
-  // font-size: 15px;
-  font-weight: 100;
 }
 }
 @media screen and (max-width:700px) {
@@ -1322,10 +1358,110 @@ input[type='text'][readonly]:focus{
     margin: 0 2px;
   }
 }
-.header .enroll {
-  right: 80px;
+.banner {
+  .ted-line {
+    width: 539px;
+    height: 226px;
+    left: 0;
+    top: 15%;
+    margin-top: 0;
+    margin-left: 10%;
+    .line-box {
+      &.l1, &.l2 {
+        bottom: 0;
+      }
+      &.l1 {
+        width: 234px;
+        height: 173px;
+      }
+      &.l2 {
+        width: 306px;
+        height: 226px;
+      }
+    }
+  }
+  .ted-sign {
+    .sign-a {
+      top: 0;
+      left: -4%;
+      width: 37%;
+    }
+    .sign-b {
+      width: 54%;
+      right: -4%;
+      bottom: -2%;
+    }
+  }
+  .TEDxLogos {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin-left: 0;
+    margin-top: 0;
+    .ny_container.tedx & {
+      width: 206px;
+      height: 146px;
+      left: 50%;
+      top: 50%;
+      margin-left: -103px;
+      margin-top: -73px;
+    }
+  }
+  .TEDxexbl {
+    width: 206px;
+    height: 146px;
+    top: 20%;
+    .ny_container.tedx & {
+      left: 0;
+      top: 0;
+      margin-left: 0;
+      margin-top: 0;
+    }
+  } 
+  .TEDx2016 {
+    width: 115px;
+    height: 35px;
+    left: auto;
+    top: 5%;
+    right: 5%;
+  }
+  .TEDxDATE {
+    width: 202px;
+    height: 20px;
+    top: 62%;
+    font-size: 18px;
+    color: #fff;
+  }
+  .TEDxbtn {
+    width: 160px;
+    height: 50px;
+    top: 70%;
+  }
+  .TEDxexbl, .TEDxDATE, .TEDxbtn {
+    left: 50%;
+    margin-left: -103px;
+  }
 }
-
+.team_home {
+    ul {
+      li {
+        &, &:nth-child(4n), &:nth-child(5n){
+          margin-right: 5%;
+        }
+        width: 30%;
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+        .name {
+          font-size: 20px;
+        }
+        .post {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }
 @media screen and (max-width:560px) {
 .header .topbar_content {
@@ -1338,6 +1474,13 @@ input[type='text'][readonly]:focus{
 }
 .nav{
   top:80px;
+  .menu {
+    li {
+      a {
+        padding: 0;
+      }
+    }
+  }
 }
 .header .tedx_logo {
   font-size: 30px;
@@ -1357,21 +1500,21 @@ input[type='text'][readonly]:focus{
 }
 
 .header .enroll {
-  top: 34px;
-  right: -24px;
-  transform: scale(0.8);
+  top: 50%;
+  right: -9%;
+  transform: scale(0.8) translateY(-50%);
 }
 .header .lang_tab{
   right: -7px;
   top: 9px;
 }
 
-.header .tedx_logo {
-  font-size: 24px;
-}
-.header .tedx_name {
-  font-size: 21px;
-}
+// .header .tedx_logo {
+//   font-size: 24px;
+// }
+// .header .tedx_name {
+//   font-size: 21px;
+// }
 
 
   .col_1 .content{
@@ -1415,7 +1558,7 @@ input[type='text'][readonly]:focus{
 }
 .ny_banner, .ny_banner_2 {
   height: 370px;
-  display: none;
+  // display: none;
 }
 .talks_1{
   padding-top: 10px;
@@ -1484,9 +1627,7 @@ input[type='text'][readonly]:focus{
   width: 220px;
   height: 220px;
 }
-.team_home ul li{
-    margin: 0 0 50px 0;
-}
+
 .talks_2 li .name{
   padding-bottom: 3px;
   font-size: 20px;
@@ -1543,27 +1684,5 @@ input[type='text'][readonly]:focus{
   width: 180px;
   height: 180px;
 }
-.team_home ul{
-  padding-top: 20px;
-}
-.team_home ul li {
-  width: 130px;
-  height: 100px;
-  margin: 0 2px 30px;
-}
-.team_home ul li .photo {
-  width: 100px;
-  height: 100px;
-}
-.team_home ul li .name {
-  right: 0;
-  bottom: -2px;
-}
-.team_home ul li .name, .team_home ul li .name .txt {
-  width: 64px;
-  height: 64px;
-}
-.team_home ul li .name .txt {
-  font-size: 10px;
-}
+
 }
