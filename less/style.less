@@ -737,7 +737,7 @@ input[type='text'][readonly]:focus{
     overflow: hidden;
     font-size: 20px;
     // background: url(../images/t_16.jpg) repeat center;
-    background-color: #f1f1f3;
+    background-color: #f6f6f6;
     .title{
         margin-top: 75px;
         padding-bottom: 40px;
@@ -758,18 +758,34 @@ input[type='text'][readonly]:focus{
             letter-spacing: 1px;
             background: url(../images/bor.png) no-repeat 1px center;
         }
+
+        .slogan-list {
+          padding-left: 140px;
+        }
         p{
             margin-bottom: 12px;
             font-weight: 300;
             font-size: 20px;
             line-height: 1.2;
-            color: #333;
+            color: #7f7f7f;
             &.content-summary{
               margin-bottom: 30px;
             }
-            span{
+            &.slogan-em, span{
               font-size: 30px;
               font-weight: 400;
+              color: #333333;
+            }
+            &.slogan-em,&.slogan-lead {
+              text-align: center;
+            }
+            &.slogan-em{
+              margin-bottom: 40px;
+            }
+            &.slogan-item {
+              float: left;
+              box-sizing: border-box;
+              width: 50%;
             }
         }
     }
@@ -835,7 +851,7 @@ input[type='text'][readonly]:focus{
   .content{
     padding-bottom: 100px;
     .p1{
-      text-indent: 2em;
+      // text-indent: 2em;
        padding:50px 30px 0;
       font-size: 18px;
     }
@@ -934,6 +950,11 @@ input[type='text'][readonly]:focus{
       font-size: 16px;
       color: #111111;
       line-height: 2;
+      .p2 {
+        margin-top: 60px;
+        font-size: 14px;
+        text-align: center;
+      }
     }
   }
   padding-bottom: 50px;
@@ -1146,6 +1167,13 @@ input[type='text'][readonly]:focus{
     right: -7%;
   }
 } 
+.col_2{
+  .content{
+    .slogan-list {
+      padding-left: 0px;
+    }
+  }
+}
 .nav {
   li{
     width: 24%;
@@ -1244,11 +1272,29 @@ input[type='text'][readonly]:focus{
     width: 300px;
     padding: 0px 40px;
   }
+  .col_2{
+    .content{
+      p {
+        &.slogan-item{
+          font-size: 18px;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width:900px) {
   .col_1 .content li {
     padding: 0px 20px;
+  }
+  .col_2{
+    .content{
+      p {
+        &.slogan-item{
+          font-size: 16px;
+        }
+      }
+    }
   }
 }
 
@@ -1264,14 +1310,6 @@ input[type='text'][readonly]:focus{
       width: 300px;
     }
   }
-
-  .col_2 .content p {
-    margin-bottom: 0;
-    line-height: 1.5;
-      span{
-        font-size: 20px;
-      }
-    } 
 }
 @media screen and (max-width:800px) {
 .enroll{
@@ -1328,6 +1366,18 @@ input[type='text'][readonly]:focus{
     }
   }
 }
+  .col_2{
+    .content{
+      p {
+        &, &.slogan-item {
+          font-size: 14px;
+        }
+        &.slogan-em, & span {
+          font-size: 20px;
+        }
+      }
+    }
+  }
 }
 @media screen and (max-width:700px) {
   .talks_1 li{
@@ -1365,6 +1415,17 @@ input[type='text'][readonly]:focus{
     margin: 0 2px;
   }
 }
+
+// .col_2 .content p {
+//   margin-bottom: 0;
+//   line-height: 1.5;
+//   span{
+//     font-size: 20px;
+//   }
+//   &.slogan-em {
+//     font-size: 20px;
+//   }
+// } 
 .banner {
   .ted-line {
     width: 539px;
@@ -1418,7 +1479,7 @@ input[type='text'][readonly]:focus{
   .TEDxexbl {
     width: 206px;
     height: 146px;
-    top: 20%;
+    top: 30%;
     .ny_container.tedx & {
       left: 0;
       top: 0;
@@ -1436,20 +1497,39 @@ input[type='text'][readonly]:focus{
   .TEDxDATE {
     width: 202px;
     height: 20px;
-    top: 62%;
+    top: 61%;
     font-size: 18px;
     color: #fff;
   }
   .TEDxbtn {
     width: 160px;
     height: 50px;
-    top: 70%;
+    top: 68%;
   }
   .TEDxexbl, .TEDxDATE, .TEDxbtn {
     left: 50%;
     margin-left: -103px;
   }
 }
+.col_2{
+    .content{
+      p {
+        &.slogan-item{
+          float: none;
+          width: 100%;
+        }
+        &.slogan-lead, &.slogan-item{
+          font-size: 12px;
+        }
+        &.slogan-em, & span {
+          font-size: 16px;
+        }
+        &.slogan-em {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
 .team_home {
     ul {
       li {
@@ -1652,9 +1732,12 @@ input[type='text'][readonly]:focus{
   font-size: 15px;
   line-height: 1.5;
 }
-.col_2 .content p{
-  font-size: 14px;
-}
+// .col_2 .content p{
+//   font-size: 14px;
+//   &.slogan-em {
+//     font-size: 14px;
+//   }
+// }
 .tedx_1{
   padding-top: 10px;
 }
@@ -1705,6 +1788,43 @@ input[type='text'][readonly]:focus{
           font-size: 17px;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-height: 550px) {
+  .banner {
+  
+    .TEDxexbl {
+      top: 24%;
+    } 
+    .TEDxDATE {
+      top: 64%;
+    }
+    .TEDxbtn {
+      top: 73%;
+    }
+  }
+}
+@media screen and (max-height: 400px) {
+  .banner {
+    .TEDxexbl {
+      width: 146px;
+      height: 104px;
+      top: 24%;
+      .ny_container.tedx & {
+      }
+    } 
+    .TEDx2016 {
+      width: 95px;
+    }
+    .TEDxDATE {
+      font-size: 14px;
+      top: 64%;
+    }
+    .TEDxbtn {
+      width: 120px;
+      // top: 73%;
     }
   }
 }
