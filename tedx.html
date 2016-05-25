@@ -5,20 +5,29 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>TEDx - TEDxTencent</title>
+	<title>TEDxTencent 2016年度盛典倒计时</title>
 	<meta name="Copyright" content="Tencent" />
 	<link href="favicon.ico" type="image/ico" rel="shortcut icon" />
     <meta name="Keywords" content="首页 - TEDxTencent" />
-    <meta name="Description" content="无极限  有梦想" />
+    <meta name="Description" content="探索 洞见" />
+    
+     <!--QQ分享使用-->
+    <meta itemprop="name" content="TEDxTencent 2016年度盛典倒计时"/>
+    <meta itemprop="description" name="description"  content="6月6日，让我们一起做探索世界的思想战士"/>
+    <meta itemprop="image" content="http://cdn.m.tencent.com/hr/TEDxTencent-/share2016.png" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta name="screen-orientation" content="portrait">
     <meta name="x5-orientation" content="portrait">
-	<link rel="stylesheet" href="../css/style.css?20150727">
-<!--[if lt IE9]> 
-		<script src="../js/html5.js"></script>
+	<link rel="stylesheet" href="./css/style.css">
+	<!--[if lt IE9]> 
+		<script src="./js/html5.js"></script>
 	<![endif]-->
 </head>
 <body>
+<div style="position: absolute; opacity: 0; z-index: -1; width: 0; height: 0; overflow: hidden;">
+    <img src="http://cdn.m.tencent.com/hr/TEDxTencent-/share2016.png" alt="share_cover">
+</div>
 	<header class="header">
 		<section class="topbar ">
 			<div class="topbar_bg"></div>
@@ -29,7 +38,7 @@
 					</div>
 				</a></h3>
 				<a class="enroll pc" target="_blank" href="http://km.oa.com/group/TEDX/event/28210/view">关注抢票</a>
-				<a class="enroll m" target="_blank" href="http://km.oa.com/group/TEDX/event/28210/view">关注抢票</a>
+				<a class="enroll m" target="_blank" href="https://km.tencent.com/pkm/events/28210">关注抢票</a>
 				<!-- <div class="lang_tab">
 					<a class="current cn" href="index.html">简体中文</a><em class="line">|</em><a class="en" href="en/index.html">English</a>
 				</div> -->
@@ -64,27 +73,27 @@
 				<div class="line-box l1">
 					<!-- <div class="dot"></div>
 					<div class="line"></div> -->
-					<img src="../images/redlinel@2x.png">
+					<img src="./images/redlinel@2x.png">
 				</div>
 				<div class="line-box l2">
 					<!-- <div class="line-box">
 						<div class="dot"></div>
 						<div class="line"></div>
 					</div> -->
-					<img src="../images/redliner@2x.png">
+					<img src="./images/redliner@2x.png">
 				</div>
 			</section>
 			<section class="ted-sign">
 				<div class="sign-a">
-					<img src="../images/sign_a.png" alt="" title="">
+					<img src="./images/sign_a.png" alt="" title="">
 				</div>
 				<div class="sign-b">
-					<img src="../images/sign_b.png" alt="" title="">
+					<img src="./images/sign_b.png" alt="" title="">
 				</div>
 			</section>
 			<section class="ui_maxw scene" id="scene" >
 				<div class="TEDxLogos">
-					<div class="TEDxexbl"><img src="../images/exbl.png" class="layer" data-depth="0.20" alt="EXPLORE INSIGHT-探索 遇见"></div>
+					<div class="TEDxexbl"><img src="./images/exbl.png" class="layer" data-depth="0.20" alt="EXPLORE INSIGHT-探索 遇见"></div>
 				</div>
 			</section>
 		</article>
@@ -105,41 +114,43 @@
 		</div>
 	</footer>
 <script type="text/javascript">
-		if (document.addEventListener) {
-		    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-		        WeixinJSBridge.on('menu:share:appmessage', function () {
-		            WeixinJSBridge.invoke('sendAppMessage', {
-		                "appid": "",
-		                "img_url": 'http://cdn.m.tencent.com/hr/TEDxTencent-/share2016.png',
-		                "img_width": "300",
-		                "img_height": "300",
-		                "link": 'http://cdn.m.tencent.com/hr/TEDxTencent/html/index.html',
-		                "desc": '6月6日，让我们看见你追问的世界',
-		                "title": 'TEDxTencent 2016年度盛典倒计时'
-		            }, function (res) {
-		            });
-		            return false;
-		        });
-		        WeixinJSBridge.on('menu:share:timeline', function () {
-		            WeixinJSBridge.invoke('shareTimeline', {
-		                "appid": "",
-		                "img_url": 'http://cdn.m.tencent.com/hr/TEDxTencent-/share2016.png',
-		                "img_width": "300",
-		                "img_height": "300",
-		                "link": 'http://cdn.m.tencent.com/hr/TEDxTencent/html/index.html',
-		                "desc": '6月6日，让我们看见你追问的世界',
-		                "title": 'TEDxTencent 2016年度盛典倒计时'
-		            }, function (res) {
-		            });
-		            return false;
-		        });
-		    }, false);
-		}
+		// if (document.addEventListener) {
+		//     document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+		//         WeixinJSBridge.on('menu:share:appmessage', function () {
+		//             WeixinJSBridge.invoke('sendAppMessage', {
+		//                 "appid": "",
+		//                 "img_url": 'http://cdn.m.tencent.com/hr/TEDxTencent-/share2016.png',
+		//                 "img_width": "300",
+		//                 "img_height": "300",
+		//                 "link": 'http://cdn.m.tencent.com/hr/TEDxTencent/html/index.html',
+		//                 "desc": '6月6日，让我们看见你追问的世界',
+		//                 "title": 'TEDxTencent 2016年度盛典倒计时'
+		//             }, function (res) {
+		//             });
+		//             return false;
+		//         });
+		//         WeixinJSBridge.on('menu:share:timeline', function () {
+		//             WeixinJSBridge.invoke('shareTimeline', {
+		//                 "appid": "",
+		//                 "img_url": 'http://cdn.m.tencent.com/hr/TEDxTencent-/share2016.png',
+		//                 "img_width": "300",
+		//                 "img_height": "300",
+		//                 "link": 'http://cdn.m.tencent.com/hr/TEDxTencent/html/index.html',
+		//                 "desc": '6月6日，让我们看见你追问的世界',
+		//                 "title": 'TEDxTencent 2016年度盛典倒计时'
+		//             }, function (res) {
+		//             });
+		//             return false;
+		//         });
+		//     }, false);
+		// }
 
 	</script>
 
-<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="./js/modernizr-touch.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
 <script type="text/javascript" src="http://tajs.qq.com/stats?sId=45404844" charset="UTF-8"></script>
 </body>
 </html>

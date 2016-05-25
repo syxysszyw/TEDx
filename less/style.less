@@ -760,6 +760,7 @@ input[type='text'][readonly]:focus{
         }
 
         .slogan-list {
+          margin-top: 20px;
           padding-left: 140px;
         }
         p{
@@ -780,12 +781,15 @@ input[type='text'][readonly]:focus{
               text-align: center;
             }
             &.slogan-em{
-              margin-bottom: 40px;
+              // margin-bottom: 40px;
             }
             &.slogan-item {
               float: left;
               box-sizing: border-box;
               width: 50%;
+            }
+            &.slogan-lead {
+              margin-top: 30px;
             }
         }
     }
@@ -1519,13 +1523,13 @@ input[type='text'][readonly]:focus{
           width: 100%;
         }
         &.slogan-lead, &.slogan-item{
-          font-size: 12px;
+          font-size: 18px;
         }
         &.slogan-em, & span {
-          font-size: 16px;
+          font-size: 24px;
         }
         &.slogan-em {
-          margin-bottom: 10px;
+          // margin-bottom: 24px;
         }
       }
     }
@@ -1619,12 +1623,32 @@ input[type='text'][readonly]:focus{
     .content{
       padding: 24px 0;
       font-size: 16px;
-      p{
-        margin-bottom: 0;
-        font-size: 15px;
-        line-height: 1.5;
-        span{
-          font-size: 15px;
+      // p{
+      //   margin-bottom: 0;
+      //   font-size: 15px;
+      //   line-height: 1.5;
+      //   span{
+      //     font-size: 15px;
+      //   }
+      // }
+    }
+  }
+
+  .col_2{
+    .content{
+      p {
+        &.slogan-item{
+          float: none;
+          width: 100%;
+        }
+        &.slogan-lead, &.slogan-item{
+          font-size: 13px;
+        }
+        &.slogan-em, & span {
+          font-size: 20px;
+        }
+        &.slogan-em {
+          // margin-bottom: 24px;
         }
       }
     }
